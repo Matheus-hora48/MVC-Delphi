@@ -102,6 +102,29 @@
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.cliente.pas"/>
+        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.produtos.pas"/>
+        <DCCReference Include="src\model\entity\mvc.model.entity.interfaces.pas"/>
+        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.pedidos.pas"/>
+        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.entity.pas"/>
+        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.pedidosItens.pas"/>
+        <DCCReference Include="src\model\connection\mvc.model.connection.interfaces.pas"/>
+        <DCCReference Include="src\model\connection\impl\mvc.model.connection.impl.firedac.pas"/>
+        <DCCReference Include="src\model\connection\impl\mvc.model.connection.impl.query.pas"/>
+        <DCCReference Include="src\model\connection\impl\mvc.model.connection.impl.configuration.pas"/>
+        <DCCReference Include="src\model\dao\mvc.model.dao.interfaces.pas"/>
+        <DCCReference Include="src\model\dao\impl\mvc.model.dao.impl.pas"/>
+        <DCCReference Include="src\utils\mvc.utils.inferfaces.pas"/>
+        <DCCReference Include="src\utils\impl\mvc.utils.impl.query.pas"/>
+        <DCCReference Include="src\utils\impl\mvc.utils.impl.rttihelps.pas"/>
+        <DCCReference Include="src\utils\impl\mvc.utils.impl.rttiatributos.pas"/>
+        <None Include="src\model\entity\impl\__history\mvc.model.entity.impl.cliente.pas.~1~"/>
+        <None Include="src\model\entity\impl\__history\mvc.model.entity.impl.produtos.pas.~1~"/>
+        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~1~"/>
+        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~2~"/>
+        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~3~"/>
+        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~4~"/>
+        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~5~"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -127,6 +150,48 @@
                 <DeployFile LocalName="Win32\Debug\MVC.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>MVC.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~1~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~2~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~3~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~4~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~5~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\model\entity\impl\__history\mvc.model.entity.impl.cliente.pas.~1~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="src\model\entity\impl\__history\mvc.model.entity.impl.produtos.pas.~1~" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
