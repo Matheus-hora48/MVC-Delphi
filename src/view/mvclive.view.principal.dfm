@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 599
-  ClientWidth = 802
+  ClientHeight = 608
+  ClientWidth = 808
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object Form1: TForm1
   TextHeight = 21
   object Panel1: TPanel
     Left = 0
-    Top = 539
-    Width = 802
+    Top = 548
+    Width = 808
     Height = 60
     Align = alBottom
     BevelOuter = bvNone
@@ -24,6 +24,8 @@ object Form1: TForm1
     Padding.Right = 10
     Padding.Bottom = 5
     TabOrder = 0
+    ExplicitTop = 449
+    ExplicitWidth = 636
     object Label1: TLabel
       Left = 752
       Top = 19
@@ -56,7 +58,7 @@ object Form1: TForm1
   object Panel2: TPanel
     Left = 0
     Top = 0
-    Width = 802
+    Width = 808
     Height = 137
     Align = alTop
     BevelOuter = bvNone
@@ -65,6 +67,9 @@ object Form1: TForm1
     Padding.Right = 10
     Padding.Bottom = 10
     TabOrder = 1
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 636
     object edtCodigoCliente: TLabeledEdit
       Left = 10
       Top = 33
@@ -758,7 +763,7 @@ object Form1: TForm1
       Text = ''
     end
     object Button3: TButton
-      Left = 681
+      Left = 677
       Top = 91
       Width = 121
       Height = 40
@@ -1409,8 +1414,8 @@ object Form1: TForm1
   object Panel3: TPanel
     Left = 0
     Top = 137
-    Width = 802
-    Height = 402
+    Width = 808
+    Height = 411
     Align = alClient
     BevelOuter = bvNone
     Padding.Left = 10
@@ -1418,11 +1423,13 @@ object Form1: TForm1
     Padding.Right = 10
     Padding.Bottom = 10
     TabOrder = 2
+    ExplicitWidth = 636
+    ExplicitHeight = 312
     object DBGrid1: TDBGrid
       Left = 10
       Top = 10
-      Width = 782
-      Height = 382
+      Width = 788
+      Height = 391
       Align = alClient
       DataSource = DataSource1
       TabOrder = 0
