@@ -13,7 +13,7 @@ type
 
       function Fields: String;
       function Params: String;
-      function Tabela: String;
+      function NomeTabela: String;
 
       constructor Create(parent: IInterface);
       destructor Destroy; override;
@@ -64,10 +64,7 @@ begin
       if not I.Tem<Campo> then
         break;
       Result:= Result + I.GetAttibute<Campo>.Name + ', ';
-
     end;
-
-
   finally
     result := Copy(Result, 0, Result.Length-2);
     lContexto.Free;
@@ -76,7 +73,9 @@ end;
 
 function TQuery.Insert: String;
 begin
-
+  Result := 'INSERT INTO' + NomeTabela;
+  Result := Result + ' (' + Fields + ') ';
+  Result := Result + ' Values (' + Params + ');';
 end;
 
 class function TQuery.New(parent: IInterface): iQuery;
@@ -89,6 +88,7 @@ var
   lContexto: TRttiContext;
   lTipo: TRttiType;
 begin
+  Result := EmptyStr;
   lContexto := TRttiContext.Create;
   try
     lTipo := lContexto.GetType(FParent.ClassInfo);
@@ -113,8 +113,19 @@ begin
 
 end;
 
-function TQuery.Tabela: String;
+function TQuery.NomeTabela: String;
+var
+  lContexto: TRttiContext;
+  lTipo: TRttiType;
 begin
+  lContexto := TRttiContext.Create;
+  try
+    lTipo := lContexto.GetType(FParent.ClassInfo);
+    if not lTipo.Tem<Tabela> then
+      Result := lTipo.GetAttibute<Tabela>.Name;
+  finally
+    lContexto.Free;
+  end;
 
 end;
 
