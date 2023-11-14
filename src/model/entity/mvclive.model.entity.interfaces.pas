@@ -1,4 +1,4 @@
-unit mvc.model.entity.interfaces;
+unit mvclive.model.entity.interfaces;
 
 interface
 
@@ -24,7 +24,7 @@ type
   end;
 
   iPedidos = interface
-    function SetNumeroPedido(Value: Integer): iPedidos;
+    function SetNumeroPedido(const Value: Integer): iPedidos;
     function GetNumeroPedido: Integer;
     function SetDataEmissao(Value: TDateTime): iPedidos;
     function GetDataEmissao: TDateTime;
@@ -34,18 +34,18 @@ type
     function GetValorTotal: Currency;
   end;
 
-  iPedidosItens = interface
-    function SetId(const Value: Integer): iPedidosItens;
+  iPedidoItens = interface
+    function SetId(const Value: Integer): iPedidoItens;
     function GetId: Integer;
-    function SetNumeroPedido(const Value: Integer): iPedidosItens;
+    function SetNumeroPedido(const Value: Integer): iPedidoItens;
     function GetNumeroPedido: Integer;
-    function SetCodigoProduto(const Value: Integer): iPedidosItens;
+    function SetCodigoProduto(const Value: Integer): iPedidoItens;
     function GetCodigoProduto: Integer;
-    function SetQuantidade(const Value: Integer): iPedidosItens;
+    function SetQuantidade(const Value: Integer): iPedidoItens;
     function GetQuantidade: Integer;
-    function SetValorUnitario(const Value: Currency): iPedidosItens;
+    function SetValorUnitario(const Value: Currency): iPedidoItens;
     function GetValorUnitario: Currency;
-    function SetValorTotal(const Value: Currency): iPedidosItens;
+    function SetValorTotal(const Value: Currency): iPedidoItens;
     function GetValorTotal: Currency;
   end;
 
@@ -53,7 +53,7 @@ type
     function Cliente: iCliente;
     function Produtos: iProdutos;
     function Pedidos: iPedidos;
-    function PedidoItens: iPedidosItens;
+    function PedidoItens: iPedidoItens;
   end;
 
 implementation

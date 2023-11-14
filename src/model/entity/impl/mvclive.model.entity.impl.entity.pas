@@ -1,9 +1,9 @@
-unit mvc.model.entity.impl.entity;
+unit mvclive.model.entity.impl.entity;
 
 interface
 
 uses
-  mvc.model.entity.interfaces;
+  mvclive.model.entity.interfaces;
 
 type
   TEntity = class(TInterfacedObject, iEntity)
@@ -11,28 +11,27 @@ type
     FCliente: iCliente;
     FProdutos: iProdutos;
     FPedidos: iPedidos;
-    FPedidosItens: iPedidosItens;
+    FPedidoItens: iPedidoItens;
   public
     class function New: iEntity;
     function Cliente: iCliente;
     function Produtos: iProdutos;
     function Pedidos: iPedidos;
-    function PedidoItens: iPedidosItens;
-end;
-
+    function PedidoItens: iPedidoItens;
+  end;
 
 implementation
 
 uses
-  mvc.model.entity.impl.cliente, mvc.model.entity.impl.pedidos,
-  mvc.model.entity.impl.produtos, mvc.model.entity.impl.pedidosItens;
-
-{ TEntity }
+  mvclive.model.entity.impl.Cliente,
+  mvclive.model.entity.impl.PedidoItens,
+  mvclive.model.entity.impl.Pedidos,
+  mvclive.model.entity.impl.Produtos;
 
 function TEntity.Cliente: iCliente;
 begin
   if not Assigned(FCliente) then
-    FCliente := TCliente.new;
+    FCliente := TCliente.New;
   Result := FCliente;
 end;
 
@@ -41,24 +40,24 @@ begin
   Result := Self.Create;
 end;
 
-function TEntity.PedidoItens: iPedidosItens;
+function TEntity.PedidoItens: iPedidoItens;
 begin
-  if not Assigned(FPedidosItens) then
-    FPedidosItens := TPedidosItens.new;
-  Result := FPedidosItens;
+  if not Assigned(FPedidoItens) then
+    FPedidoItens := TPedidoItens.New;
+  Result := FPedidoItens;
 end;
 
 function TEntity.Pedidos: iPedidos;
 begin
   if not Assigned(FPedidos) then
-    FPedidos := TPedidos.new;
+    FPedidos := TPedidos.New;
   Result := FPedidos;
 end;
 
 function TEntity.Produtos: iProdutos;
 begin
   if not Assigned(FProdutos) then
-    FProdutos := TProdutos.new;
+    FProdutos := TProdutos.New;
   Result := FProdutos;
 end;
 

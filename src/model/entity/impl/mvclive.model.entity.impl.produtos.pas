@@ -1,15 +1,20 @@
-unit mvc.model.entity.impl.produtos;
+unit mvclive.model.entity.impl.produtos;
 
 interface
 
 uses
-  mvc.model.entity.interfaces;
+  mvclive.utils.impl.atributos,
+  mvclive.model.entity.interfaces;
 
 type
+  [Tabela('PRODUTOS')]
   TProdutos = class(TInterfacedObject, iProdutos)
   private
+    [Campo('CODIGO'), PK]
     FCodigo: Integer;
+    [Campo('DESCRICAO')]
     FDescricao: String;
+    [Campo('PRECOVENDA'), PK]
     FPrecoVenda: Currency;
   public
     class function New: iProdutos;
@@ -19,7 +24,7 @@ type
     function GetDescricao: String;
     function SetPrecoVenda(const Value: Currency): iProdutos;
     function GetPrecoVenda: Currency;
-end;
+  end;
 
 implementation
 

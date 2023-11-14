@@ -1,21 +1,22 @@
-unit mvc.model.entity.impl.cliente;
+unit mvclive.model.entity.impl.cliente;
 
 interface
 
 uses
-  mvc.model.entity.interfaces, mvc.utils.impl.rttiatributos;
+  mvclive.utils.impl.atributos,
+  mvclive.model.entity.interfaces;
 
 type
   [Tabela('CLIENTE')]
   TCliente = class(TInterfacedObject, iCliente)
   private
-    [Campo('CODIGO')]
+    [Campo('CODIGO'), PK]
     FCodigo: Integer;
     [Campo('NOME')]
     FNome: String;
     [Campo('CIDADE')]
     FCidade: String;
-    [Campo('ESTADO')]
+    [Campo('UF')]
     FEstado: String;
   public
     class function New: iCliente;
@@ -27,13 +28,13 @@ type
     function GetCidade: String;
     function SetEstado(const Value: String): iCliente;
     function GetEstado: String;
-end;
+  end;
 
 implementation
 
 function TCliente.GetCidade: String;
 begin
-   Result := FCidade;
+  Result := FCidade;
 end;
 
 function TCliente.GetCodigo: Integer;

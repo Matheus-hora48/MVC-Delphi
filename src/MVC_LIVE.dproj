@@ -1,6 +1,6 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{0D4DCD8E-BD8C-4B59-AB33-9AA9C565E2F4}</ProjectGuid>
+        <ProjectGuid>{67768EEB-2DDD-491F-9195-5126D400C939}</ProjectGuid>
         <ProjectVersion>19.5</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
@@ -8,7 +8,7 @@
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
-        <MainSource>MVC.dpr</MainSource>
+        <MainSource>MVC_LIVE.dpr</MainSource>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
         <Base>true</Base>
@@ -57,10 +57,10 @@
         <Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
-        <SanitizedProjectName>MVC</SanitizedProjectName>
+        <SanitizedProjectName>MVC_LIVE</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_UsePackage>soapserver;IndySystem;vclwinx;fmx;vclie;DbxCommonDriver;bindengine;vcldb;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;IndyIPClient;dbxcds;vcledge;vclFireDAC;bindcompvclwinx;bindcomp;FmxTeeUI;FireDACCommon;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;rtl;FireDACMySQLDriver;FireDACSqliteDriver;DbxClientDriver;FireDACADSDriver;Tee;RESTComponents;DBXSqliteDriver;vcl;vclactnband;TeeUI;IndyIPServer;fmxFireDAC;dbexpress;dsnapxml;dsnapcon;soapmidas;adortl;DBXMySQLDriver;VclSmp;inet;vclimg;vcltouch;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;dbrtl;bindcompvcl;dsnap;fmxdae;TeeDB;CloudService;FireDACMSAccDriver;CustomIPTransport;fmxobj;bindcompvclsmp;FMXTee;soaprtl;vcldsnap;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>soapserver;IndySystem;vclwinx;fmx;vclie;DbxCommonDriver;bindengine;vcldb;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;IndyIPClient;dbxcds;vcledge;vclFireDAC;bindcompvclwinx;bindcomp;FireDACCommon;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;rtl;FireDACMySQLDriver;FireDACSqliteDriver;DbxClientDriver;FireDACADSDriver;frce;RESTComponents;soapmidas;DBXSqliteDriver;vcl;vclactnband;IndyIPServer;dsnapxml;fmxFireDAC;dbexpress;dsnapcon;adortl;DBXMySQLDriver;VclSmp;inet;vclimg;vcltouch;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;dbrtl;bindcompvcl;dsnap;fmxdae;CloudService;FireDACMSAccDriver;CustomIPTransport;fmxobj;bindcompvclsmp;soaprtl;vcldsnap;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -69,7 +69,7 @@
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
-        <DCC_UsePackage>soapserver;IndySystem;vclwinx;fmx;vclie;DbxCommonDriver;bindengine;vcldb;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;IndyIPClient;dbxcds;vcledge;vclFireDAC;bindcompvclwinx;bindcomp;FmxTeeUI;FireDACCommon;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;rtl;FireDACMySQLDriver;FireDACSqliteDriver;DbxClientDriver;FireDACADSDriver;Tee;RESTComponents;DBXSqliteDriver;vcl;vclactnband;TeeUI;IndyIPServer;fmxFireDAC;dbexpress;dsnapxml;dsnapcon;soapmidas;adortl;DBXMySQLDriver;VclSmp;inet;vclimg;vcltouch;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;dbrtl;bindcompvcl;dsnap;fmxdae;TeeDB;CloudService;FireDACMSAccDriver;CustomIPTransport;fmxobj;bindcompvclsmp;FMXTee;soaprtl;vcldsnap;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_UsePackage>soapserver;IndySystem;vclwinx;fmx;vclie;DbxCommonDriver;bindengine;vcldb;IndyIPCommon;VCLRESTComponents;FireDACCommonODBC;FireDACCommonDriver;appanalytics;IndyProtocols;vclx;IndyIPClient;dbxcds;vcledge;vclFireDAC;bindcompvclwinx;bindcomp;FireDACCommon;IndyCore;RESTBackendComponents;bindcompfmx;bindcompdbx;inetdb;rtl;FireDACMySQLDriver;FireDACSqliteDriver;DbxClientDriver;FireDACADSDriver;RESTComponents;soapmidas;DBXSqliteDriver;vcl;vclactnband;IndyIPServer;dsnapxml;fmxFireDAC;dbexpress;dsnapcon;adortl;DBXMySQLDriver;VclSmp;inet;vclimg;vcltouch;FireDACPgDriver;FireDAC;fmxase;inetdbxpress;xmlrtl;tethering;dbrtl;bindcompvcl;dsnap;fmxdae;CloudService;FireDACMSAccDriver;CustomIPTransport;fmxobj;bindcompvclsmp;soaprtl;vcldsnap;DBXInterBaseDriver;FireDACIBDriver;$(DCC_UsePackage)</DCC_UsePackage>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -84,6 +84,10 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <DCC_ExeOutput>.\bin</DCC_ExeOutput>
+        <DCC_DcuOutput>.\lib</DCC_DcuOutput>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -98,33 +102,33 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="src\view\mvc.view.principal.pas">
+        <DCCReference Include="view\mvclive.view.principal.pas">
             <Form>Form1</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.cliente.pas"/>
-        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.produtos.pas"/>
-        <DCCReference Include="src\model\entity\mvc.model.entity.interfaces.pas"/>
-        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.pedidos.pas"/>
-        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.entity.pas"/>
-        <DCCReference Include="src\model\entity\impl\mvc.model.entity.impl.pedidosItens.pas"/>
-        <DCCReference Include="src\model\connection\mvc.model.connection.interfaces.pas"/>
-        <DCCReference Include="src\model\connection\impl\mvc.model.connection.impl.firedac.pas"/>
-        <DCCReference Include="src\model\connection\impl\mvc.model.connection.impl.query.pas"/>
-        <DCCReference Include="src\model\connection\impl\mvc.model.connection.impl.configuration.pas"/>
-        <DCCReference Include="src\model\dao\mvc.model.dao.interfaces.pas"/>
-        <DCCReference Include="src\model\dao\impl\mvc.model.dao.impl.pas"/>
-        <DCCReference Include="src\utils\mvc.utils.inferfaces.pas"/>
-        <DCCReference Include="src\utils\impl\mvc.utils.impl.query.pas"/>
-        <DCCReference Include="src\utils\impl\mvc.utils.impl.rttihelps.pas"/>
-        <DCCReference Include="src\utils\impl\mvc.utils.impl.rttiatributos.pas"/>
-        <None Include="src\model\entity\impl\__history\mvc.model.entity.impl.cliente.pas.~1~"/>
-        <None Include="src\model\entity\impl\__history\mvc.model.entity.impl.produtos.pas.~1~"/>
-        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~1~"/>
-        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~2~"/>
-        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~3~"/>
-        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~4~"/>
-        <None Include="src\model\entity\__history\mvc.model.entity.interfaces.pas.~5~"/>
+        <DCCReference Include="model\entity\mvclive.model.entity.interfaces.pas"/>
+        <DCCReference Include="model\entity\impl\mvclive.model.entity.impl.cliente.pas"/>
+        <DCCReference Include="model\entity\impl\mvclive.model.entity.impl.produtos.pas"/>
+        <DCCReference Include="model\entity\impl\mvclive.model.entity.impl.pedidos.pas"/>
+        <DCCReference Include="model\entity\impl\mvclive.model.entity.impl.pedidoitens.pas"/>
+        <DCCReference Include="model\entity\impl\mvclive.model.entity.impl.entity.pas"/>
+        <DCCReference Include="model\connection\mvclive.model.connection.interfaces.pas"/>
+        <DCCReference Include="model\connection\impl\mvclive.model.connection.impl.firedac.pas"/>
+        <DCCReference Include="model\connection\impl\mvclive.model.connection.impl.query.pas"/>
+        <DCCReference Include="model\connection\impl\mvclive.model.connection.impl.configuration.pas"/>
+        <DCCReference Include="model\dao\mvclive.model.dao.interfaces.pas"/>
+        <DCCReference Include="model\dao\impl\mvclive.model.dao.impl.daogenerico.pas"/>
+        <DCCReference Include="utils\mvclive.utils.interfaces.pas"/>
+        <DCCReference Include="utils\impl\mvclive.utils.impl.query.pas"/>
+        <DCCReference Include="utils\impl\mvclive.utils.impl.rtthelper.pas"/>
+        <DCCReference Include="utils\impl\mvclive.utils.impl.atributos.pas"/>
+        <DCCReference Include="utils\impl\mvclive.utils.impl.utils.pas"/>
+        <DCCReference Include="controller\mvclive.controller.interfaces.pas"/>
+        <DCCReference Include="controller\impl\mvclive.controller.impl.controller.pas"/>
+        <DCCReference Include="view\mvclive.view.cadastrocliente.pas">
+            <Form>FormCliente</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -143,55 +147,17 @@
         <BorlandProject>
             <Delphi.Personality>
                 <Source>
-                    <Source Name="MainSource">MVC.dpr</Source>
+                    <Source Name="MainSource">MVC_LIVE.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="4">
-                <DeployFile LocalName="Win32\Debug\MVC.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="bin\MVC_LIVE.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
-                        <RemoteName>MVC.exe</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~1~" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~2~" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~3~" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~4~" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="src\model\entity\__history\mvc.model.entity.interfaces.pas.~5~" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="src\model\entity\impl\__history\mvc.model.entity.impl.cliente.pas.~1~" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="src\model\entity\impl\__history\mvc.model.entity.impl.produtos.pas.~1~" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
+                        <RemoteName>MVC_LIVE.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

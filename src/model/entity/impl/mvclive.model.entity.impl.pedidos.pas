@@ -1,20 +1,27 @@
-unit mvc.model.entity.impl.pedidos;
+unit mvclive.model.entity.impl.pedidos;
 
 interface
 
 uses
-  mvc.model.entity.interfaces;
+  System.SysUtils,
+  mvclive.utils.impl.atributos,
+  mvclive.model.entity.interfaces;
 
 type
-  TPedidos= class(TInterfacedObject, iPedidos)
+  [Tablea('PEDIDOS')]
+  TPedidos = class(TInterfacedObject, iPedidos)
   private
+    [Campo('NUMEROPEDIDO'), PK]
     FNumeroPedido: Integer;
+    [Campo('DATAEMISSAO')]
     FDataEmissao: TDateTime;
+    [Campo('CODIGO_CLIENTE'), FK]
     FCodigoCliente: Integer;
+    [Campo('VALORTOTAL')]
     FValorTotal: Currency;
   public
     class function New: iPedidos;
-    function SetNumeroPedido(Value: Integer): iPedidos;
+    function SetNumeroPedido(const Value: Integer): iPedidos;
     function GetNumeroPedido: Integer;
     function SetDataEmissao(Value: TDateTime): iPedidos;
     function GetDataEmissao: TDateTime;
@@ -22,11 +29,9 @@ type
     function GetCodigoCliente: Integer;
     function SetValorTotal(const Value: Currency): iPedidos;
     function GetValorTotal: Currency;
-end;
+  end;
 
 implementation
-
-{ TPedidos }
 
 function TPedidos.GetCodigoCliente: Integer;
 begin
@@ -65,7 +70,7 @@ begin
   FDataEmissao := Value;
 end;
 
-function TPedidos.SetNumeroPedido(Value: Integer): iPedidos;
+function TPedidos.SetNumeroPedido(const Value: Integer): iPedidos;
 begin
   Result := Self;
   FNumeroPedido := Value;

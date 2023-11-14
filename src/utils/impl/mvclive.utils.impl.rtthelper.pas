@@ -1,4 +1,4 @@
-unit mvc.utils.impl.rttihelps;
+unit mvclive.utils.impl.rtthelper;
 
 interface
 
@@ -7,12 +7,12 @@ uses
 
 type
   TRttiTypeHelper = class helper for TRttiType
-    function Tem<T: TCustomAttribute>: boolean;
+    function Tem<T: TCustomAttribute>: Boolean;
     function GetAttibute<T: TCustomAttribute>: T;
   end;
 
   TRttiFieldHelper = class helper for TRttiField
-    function Tem<T: TCustomAttribute>: boolean;
+    function Tem<T: TCustomAttribute>: Boolean;
     function GetAttibute<T: TCustomAttribute>: T;
   end;
 
@@ -30,7 +30,7 @@ begin
       Exit((lAtributo as T));
 end;
 
-function TRttiTypeHelper.Tem<T>: boolean;
+function TRttiTypeHelper.Tem<T>: Boolean;
 begin
   Result := GetAttibute<T> <> nil;
 end;
@@ -38,13 +38,18 @@ end;
 { TRttiFieldHelper }
 
 function TRttiFieldHelper.GetAttibute<T>: T;
+var
+  lAtributo: TCustomAttribute;
 begin
-
+  Result := nil;
+  for lAtributo in GetAttributes do
+    if lAtributo is T then
+      Exit((lAtributo as T));
 end;
 
-function TRttiFieldHelper.Tem<T>: boolean;
+function TRttiFieldHelper.Tem<T>: Boolean;
 begin
-
+  Result := GetAttibute<T> <> nil;
 end;
 
 end.
