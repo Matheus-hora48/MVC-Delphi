@@ -58,6 +58,21 @@ begin
   .SetCidade(edtCidade.Text).SetEstado(edtEstado.Text);
 
   FController.dao(lCliente).Inserir;
+
+  var lDataSource := TDataSource.Create(nil);
+  try
+    FController.dao(lCliente).Listar.DataSource(lDataSource);
+    lDataSource.DataSet.Locate('NOME;CIDADE;UF', VarArrayOf([lCliente.GetNome, lCliente.GetCidade, lCliente.GetEstado]), []);
+    fCodigo := lDataSource.DataSet.FieldByName('CODIGO').AsInteger;
+    fNome := lDataSource.DataSet.FieldByName('NOME').AsString;
+
+    ShowMessage('Cliente cadastrado com sucesso!!');
+    LimparCampos;
+    Self.Close;
+  finally
+    lDataSource.Free;
+
+  end;
 end;
 
 procedure TFormCliente.FormCreate(Sender: TObject);

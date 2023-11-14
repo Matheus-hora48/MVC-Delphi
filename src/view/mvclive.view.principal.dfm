@@ -24,8 +24,8 @@ object Form1: TForm1
     Padding.Right = 10
     Padding.Bottom = 5
     TabOrder = 0
-    ExplicitTop = 449
-    ExplicitWidth = 636
+    ExplicitTop = 539
+    ExplicitWidth = 802
     object Label1: TLabel
       Left = 752
       Top = 19
@@ -67,9 +67,7 @@ object Form1: TForm1
     Padding.Right = 10
     Padding.Bottom = 10
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitTop = 8
-    ExplicitWidth = 636
+    ExplicitWidth = 802
     object edtCodigoCliente: TLabeledEdit
       Left = 10
       Top = 33
@@ -723,6 +721,7 @@ object Form1: TForm1
         Height = 29
         Align = alClient
         Flat = True
+        OnClick = btnLupaClick
         ExplicitLeft = 16
         ExplicitTop = 16
         ExplicitWidth = 23
@@ -1423,8 +1422,8 @@ object Form1: TForm1
     Padding.Right = 10
     Padding.Bottom = 10
     TabOrder = 2
-    ExplicitWidth = 636
-    ExplicitHeight = 312
+    ExplicitWidth = 802
+    ExplicitHeight = 402
     object DBGrid1: TDBGrid
       Left = 10
       Top = 10

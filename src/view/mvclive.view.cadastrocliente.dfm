@@ -20,7 +20,7 @@ object FormCliente: TFormCliente
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 498
+    ExplicitWidth = 486
     object edtCodigo: TLabeledEdit
       Left = 8
       Top = 32
@@ -78,8 +78,8 @@ object FormCliente: TFormCliente
     Padding.Right = 10
     Padding.Bottom = 10
     TabOrder = 1
-    ExplicitWidth = 498
-    ExplicitHeight = 65
+    ExplicitWidth = 486
+    ExplicitHeight = 59
     object Button1: TButton
       Left = 407
       Top = 10
@@ -89,8 +89,8 @@ object FormCliente: TFormCliente
       Caption = 'Salvar'
       TabOrder = 0
       OnClick = Button1Click
-      ExplicitLeft = 413
-      ExplicitHeight = 45
+      ExplicitLeft = 401
+      ExplicitHeight = 39
     end
     object Button2: TButton
       Left = 332
@@ -100,8 +100,8 @@ object FormCliente: TFormCliente
       Align = alRight
       Caption = 'Cancelar'
       TabOrder = 1
-      ExplicitLeft = 338
-      ExplicitHeight = 45
+      ExplicitLeft = 326
+      ExplicitHeight = 39
     end
   end
 end
